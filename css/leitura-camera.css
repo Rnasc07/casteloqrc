@@ -75,10 +75,7 @@ main{
     height: 85%;
     background-color: #222222;
     border-radius: 4px;
-}
-#exibicao-camera img{
-    width: 100%;
-    height: 100%;
+    position: relative;
 }
 #exibicao-camera video{
     width: 100%;
