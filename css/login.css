@@ -116,7 +116,6 @@ body{
         align-items: center;
         padding: 0;
         height: auto !important;
-        border: 2px solid red;
     }
     #container-logo, #container-box-login{
         width: 100%;
@@ -130,6 +129,7 @@ body{
     }
     #container-box-login{
         background-color: var(--cor-padrao);
+        border: 2px solid yellow;
     }
     #container-logo img{
         width: 170px;
