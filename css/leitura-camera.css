@@ -72,18 +72,19 @@ main{
 }
 #exibicao-camera{
     max-width: 370px;
-    height: 85%;
+    height: 85vh;
     background-color: #222222;
     border-radius: 4px;
     position: relative;
 }
-#exibicao-camera video{
+#qr-video{
     width: 100%;
     height: 100%;
 }
 
 #botoes-interacoes-camera{
     max-width: 650px;
+    width: 100%;
 }
 #botoes-interacoes-camera fieldset{
     display: flex;
