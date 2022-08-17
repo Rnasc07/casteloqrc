@@ -115,6 +115,8 @@ body{
         background-image: none;
         align-items: center;
         padding: 0;
+        height: auto !important;
+        border: 2px solid red;
     }
     #container-logo, #container-box-login{
         width: 100%;
