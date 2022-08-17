@@ -126,11 +126,9 @@ body{
     }
     #container-logo{
         background-color: #f9f9f9;
-        border: 1px solid red;
     }
     #container-box-login{
         background-color: var(--cor-padrao);
-        border: 2px solid yellow;
     }
     #container-logo img{
         width: 170px;
