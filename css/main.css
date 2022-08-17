@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap');
+
+:root{
+    --cor-padrao: #009fd9;
+    --cor-padrao-contraste: #249FB0;
+    --clr-border: #ffffff;
+}
+
+/* Resets */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    background-color: var(--cor-padrao);
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* == INFORMAÇÕES DO USUÁRIO LOGADO == */
+body{
+    width: 100%;
+    height: 100vh;
+}
+
+/* == (CABEÇALHO) PARTE QUE EXIBE O LINK PARA A TELA INICIAL E USUÁRIO LOGADO == */
+header{
+    display: flex;
+    padding: 15px;
+    justify-content: flex-end;
+    height: 10%;
+}
+#info-usuario-logado{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+#info-usuario-logado h5{
+    width: 100%;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 0.9em;
+}
+#info-usuario-logado a{
+    color: #ffffff;
+}
+#info-usuario-logado a svg{
+    width: 35px;
+}
+
+/* == CONTEÚDO INICIAL DO APP - TELA DE INICIALIZAÇÃO == */
+main{
+    width: 100%;
+    display: flex;
+    height: 90%;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+}
+#container-inicial-scanner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+#container-inicial-scanner h1{
+    color: #f9f9f9;
+    font-weight: 500;
+    font-size: 2.2em;
+    text-align: center;
+}
+.box-scan{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    font-size: 2em;
+    padding: 0.5em;
+    line-height: 1;
+    background-position: 0 0, 0 0, 100% 0, 0 100%;
+    background-size: 3px 100%, 100% 3px, 3px 100%, 100% 3px;
+    background-repeat: no-repeat;
+}
+.border-box-scan{
+    background-image: linear-gradient(0deg, var(--clr-border), var(--clr-border) 25%, transparent 25%, transparent 75%, var(--clr-border) 75%), linear-gradient(90deg, var(--clr-border), var(--clr-border) 25%, transparent 25%, transparent 75%, var(--clr-border) 75%), linear-gradient(180deg, var(--clr-border), var(--clr-border) 25%, transparent 25%, transparent 75%, var(--clr-border) 75%), linear-gradient(270deg, var(--clr-border), var(--clr-border) 25%, transparent 25%, transparent 75%, var(--clr-border) 75%);
+}
+#icone-qr-code img{
+    background-color: #ffffff;
+    padding: 12px;
+    border-radius: 2px;
+    width: 170px;
+    position: relative;
+    top: 3px;
+}
+#btn-iniciar-leitura{
+    width: 200px;
+    height: 50px;
+    background-color: #ffffff;
+    border: none;
+    outline: none;
+    border-radius: 2px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--cor-padrao-contraste);
+    cursor: pointer;
+}
+#btn-iniciar-leitura:hover{
+    opacity: 0.78;
+}
+
+/* == CONFIGURAÇÕES PARA DISPOSITIVOS MENORES == */
+@media only screen and (max-width: 950px){
+    #container-inicial-scanner h1{
+        font-size: 1.8em;
+    }
+    .box-scan{
+        width: 160px;
+        height: 160px;
+    }
+    #icone-qr-code img{
+        width: 135px;
+        position: relative;
+        top: 3px;
+    }
+    #btn-iniciar-leitura{
+        width: 162px;
+    }
+}

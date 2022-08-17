@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap');
+
+:root{
+    --cor-padrao: #009fd9;
+    --cor-padrao-contraste: #249FB0;
+    --clr-border: #ffffff;
+}
+
+/* == RESETS == */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    background-color: var(--cor-padrao);
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+}
+
+/* == (CABEÇALHO) PARTE QUE EXIBE O LINK PARA A TELA INICIAL E USUÁRIO LOGADO == */
+header{
+    display: flex;
+    padding: 15px;
+    align-items: center;
+    justify-content: space-between;
+    height: 10%;
+}
+header a{
+    color: #ffffff;
+}
+header a svg{
+    width: 35px;
+}
+#info-usuario-logado{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+#info-usuario-logado h5{
+    width: 100%;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 0.9em;
+}
+#info-usuario-logado a{
+    color: #ffffff;
+}
+#info-usuario-logado a svg{
+    width: 35px;
+}
+
+/* == (PRINCIPAL) DIV DISPLAY QUE IRÁ APRESENTAR A LEITURA DA CAMERA EM TEMPO REAL E BOTÕES DE INTERAÇÃO COM A CÂMERA == */
+main{
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 10px 25px 10px;
+}
+#container-exibicao-camera{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    height: 100%;
+}
+#exibicao-camera{
+    width: 370px;
+    height: 85%;
+    background-color: #222222;
+    border-radius: 4px;
+}
+#exibicao-camera img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#botoes-interacoes-camera{
+    max-width: 650px;
+}
+#botoes-interacoes-camera fieldset{
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 2px;
+    flex-wrap: wrap;
+}
+#botoes-interacoes-camera fieldset legend{
+    font-size: 1.1em;
+    padding: 0 5px;
+}
+#botoes-interacoes-camera button{
+    background-color: #ffffff;
+    border: none;
+    outline: none;
+    border-radius: 2px;
+    font-weight: 600;
+    color: var(--cor-padrao-contraste);
+    cursor: pointer;
+    padding: 7px;
+}
+#botoes-interacoes-camera button:hover{
+    opacity: 0.78;
+}
+
+/* == CONFIGURAÇÕES PARA DISPOSITIVOS MENORES == */
+@media only screen and (max-width: 950px){
+    #exibicao-camera{
+        height: 90% !important;
+    }
+    #botoes-interacoes-camera fieldset legend{
+        font-size: 0.9em;
+        padding: 0 3px;
+    }
+    #botoes-interacoes-camera button{
+        font-size: 0.7em;
+        padding: 5px;
+    }
+}
+
+@media only screen and (max-width: 450px){
+    header a svg{
+        width: 25px;
+    }
+    #info-usuario-logado h5{
+        font-size: 0.75em;
+    }
+    #info-usuario-logado a svg{
+        width: 25px;
+    }
+    #exibicao-camera{
+        width: 90%;
+    }
+}

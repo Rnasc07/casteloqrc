@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap');
+
+:root{
+    --cor-padrao: #009fd9;
+    --cor-padrao-contraste: #93e0ed;
+}
+
+/* Resets */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    background-color: #f9f9f9;
+    background-image: -webkit-linear-gradient(-30deg, #f9f9f9 50%, var(--cor-padrao) 50%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 170px 0 130px;
+}
+
+/* == LOGO == */
+#container-logo img{
+    width: 340px;
+}
+
+/* == FORMULÁRIO LOGIN == */
+#box-esqueci-senha{
+    width: 370px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    padding: 15px;
+}
+#form-solicitar-troca-senha{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+#form-solicitar-troca-senha h4{
+    text-align: center;
+    color: #333333;
+    font-weight: 500;
+    font-size: 1.7em;
+}
+#form-solicitar-troca-senha > p{
+    text-align: center;
+    color: #333333;
+    font-weight: 400;
+    font-size: 0.9em;
+}
+.grupo-campo{
+    display: flex;
+    align-items: center;
+}
+.grupo-campo label{
+    min-width: 70px;
+    color: #777777;
+    font-weight: 400;
+    font-size: 0.95em;
+}
+.grupo-campo input[type='text']{
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid #cccccc;
+    padding-bottom: 3px;
+    outline: none;
+    font-weight: 600;
+    color: var(--cor-padrao);
+    transition: 0.4s;
+}
+.grupo-campo input[type='text']:focus{
+    border-bottom: 1px solid var(--cor-padrao);
+}
+#btn-solicitar-troca-senha{
+    padding: 15px;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    background-color: var(--cor-padrao);
+    font-weight: 600;
+    color: #ffffff;
+    cursor: pointer;
+    transition: 0.1s;
+}
+#btn-solicitar-troca-senha:hover{
+    opacity: 0.88;
+}
+
+/* == CONFIGURAÇÕES PARA DISPOSITIVOS MENORES == */
+@media only screen and (max-width: 1100px){
+    body{
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+        background-image: none;
+        align-items: center;
+        padding: 0;
+    }
+    #container-logo, #container-box-esqueci-senha{
+        width: 100%;
+        padding: 35px;
+        display: flex;
+        justify-content: center;
+    }
+    #container-logo{
+        background-color: #f9f9f9;
+    }
+    #container-box-esqueci-senha{
+        background-color: var(--cor-padrao);
+    }
+    #container-logo img{
+        width: 170px;
+    }
+    #form-solicitar-troca-senha h4{
+        font-size: 1.8em;
+    }
+}
+
+@media only screen and (max-width: 550px){
+    #form-solicitar-troca-senha p{
+        font-size: 0.8em;
+    }
+    #form-solicitar-troca-senha h4{
+        font-size: 1.5em;
+    }
+    .grupo-campo label{
+        font-size: 0.83em;
+    }
+}
