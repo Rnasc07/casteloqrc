@@ -82,9 +82,10 @@ main{
     object-fit: cover;
 }
 #exibicao-camera video{
-    max-width: 100%;
+    max-width: 100vw;
     max-height: 90vh;
 }
+
 #botoes-interacoes-camera{
     max-width: 650px;
 }
